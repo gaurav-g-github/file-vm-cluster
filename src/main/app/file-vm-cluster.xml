@@ -11,8 +11,8 @@ http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/cu
     <flow name="file-vm-clusterFlow">
         <file:inbound-endpoint path="src/main/resources" responseTimeout="10000" doc:name="File"/>
         <file:file-to-string-transformer doc:name="File to String"/>
-        <expression-component doc:name="Expression"><![CDATA[bids[]=#[payload.splitby("\n")]
-payload=java.util.Arrays.asList(bids)]]></expression-component>
+        <expression-component doc:name="Expression"><![CDATA[String []bids=payload.split("\n");
+payload=java.util.Arrays.asList(bids);]]></expression-component>
         <collection-splitter doc:name="Collection Splitter"/>
         <vm:outbound-endpoint exchange-pattern="one-way" path="bids" doc:name="VM"/>
     </flow>
