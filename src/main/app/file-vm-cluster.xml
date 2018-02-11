@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
 http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd">
     <flow name="file-vm-clusterFlow">
         <file:inbound-endpoint path="target/classes/" responseTimeout="10000" doc:name="File">
-		<file:filename-regex-filter pattern="*.txt" caseSensitive="false"/>
+		<file:filename-regex-filter pattern="bids_large.txt" caseSensitive="false"/>
 	</file:inbound-endpoint>	
         <file:file-to-string-transformer doc:name="File to Stritarget/classes/ng"/>
         <expression-component doc:name="Expression"><![CDATA[String []bids=payload.split("\n");
