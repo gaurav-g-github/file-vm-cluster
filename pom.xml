@@ -63,9 +63,6 @@
 				<version>2.0</version>
 				<configuration>
 					<deploymentType>arm</deploymentType>
-					<applications>
-						<application>/file-vm-cluster</application>
-					</applications>
 					<username>gauravg2</username>
 					<password>Shanug30</password>
 					<target>gauravc1</target>
