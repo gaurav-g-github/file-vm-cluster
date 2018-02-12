@@ -62,13 +62,22 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>2.0</version>
 				<configuration>
-					<deploymentType>cloudhub</deploymentType>
-					<muleVersion>3.9.0</muleVersion>
+					<deploymentType>arm</deploymentType>
+
 					<username>gauravg2</username>
+
 					<password>Shanug30</password>
-					<workerType>Micro</workerType>
-					<redeploy>true</redeploy>
+
+					<target>gauravc1</target>
+
+					<!-- One of: server, serverGroup, cluster: -->
+
+					<targetType>cluster</targetType>
+
 					<environment>Sandbox</environment>
+
+				</configuration>
+
 				</configuration>
 				<executions>
 					<execution>
